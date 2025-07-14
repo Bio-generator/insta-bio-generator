@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="Generate cool Instagram bios based on your mood with Ankita's Insta Bio Generator!">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ankita's Insta Bio Generator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="preloader">
+  <div class="loader-text">✨ Ankita's Insta Bio Generator ✨</div>
+</div>
+
+  <!-- Your existing content -->
+  <div class="container">
+
+    <div class="top-bar">
+    
+    <div class="insta-header">
+      <a href="https://www.instagram.com/" target="_blank" title="Open Instagram">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
+          alt="Instagram Logo"
+        />
+      </a>
+    </div>
+    <button onclick="toggleDarkMode()" class="btn-toggle" id="mode-toggle">(darkmode🌙)</button>
+    <h1>Ankita's Insta Bio Generator</h1>
+    <div class="caption-bar">
+  <p>Click a mood to get your perfect caption ✨</p>
+ 
+
+</div>
+
+    <div class="buttons">
+      <button onclick="generateCaption('happy')" title="Generate a happy caption">😊 Happy</button>
+      <button onclick="generateCaption('moody')" title="Generate a moody caption">🌙 Moody</button>
+      <button onclick="generateCaption('boss')" title="Generate a boss vibe caption">💅 Boss Vibe</button>
+      <button onclick="generateCaption('aesthetic')" title="Generate an aesthetic caption">🎨 Surprise</button>
+    
+      <!-- AI Bio Suggestion Section -->
+<div class="ai-suggestion">
+  <input type="text" id="keywords" placeholder="Type a mood or keyword..." />
+  <button onclick="getAISuggestion()" class="btn-wide">✨ Generate AI Bio</button>
+  <p id="ai-output"><b>Your AI-style bio will appear here...</b></p>
+</div>
+
+      
+
+    </div>
+
+    <div id="caption-box">
+  <p id="caption-text">Your caption will appear here...</p>
+  
+  <div class="button-row">
+    <button
+      onclick="copyCaption()"
+      id="copy-btn"
+      class="btn-wide"
+    >
+      📋 Copy Caption
+    </button>
+
+  </div>
+
+<div id="insta-popup" style="display: none;">
+  <p>This is your popup message!</p>
+  <button onclick="closePopup()">Close</button>
+</div>
+
+<script>
+  function toggleDarkMode() {
+    document.body.classList.toggle("dark");
+  }
+</script>
+
+  <script src="script.js"></script>
+  
+</body>
+</html>
